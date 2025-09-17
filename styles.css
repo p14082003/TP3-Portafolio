@@ -1,6 +1,95 @@
-h1{
-    color: blue;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+html,
+body {
+  background-color: black;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+  overflow: hidden;
 }
-p{
-    color: red;
+
+.zoom {
+  transition: transform 0.5s ease, color 0.5s ease;
+  color: white;
+  margin: 10px;
 }
+
+.zoom:hover {
+  transform: scale(1.05);
+  color: rgb(255, 116, 61);
+}
+/*HEADER*/
+
+#pfp {
+  width: 20%;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/*MAIN*/
+
+#descripcion {
+  text-align: justify;
+  width: 65%;
+  font-size: 1.8vw;
+}
+
+.destacado {
+  color: rgb(255, 116, 61);
+}
+
+.tecnologias_img {
+  height: 100px;
+  width: 100px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+#secreto {
+  color: rgb(12, 12, 12);
+  transition: color 0.5s ease;
+}
+
+#secreto:hover {
+  color: rgb(255, 116, 61);
+}
+
+/*FOOTER*/
+
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  /* esconder barra de scroll */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.snap-section {
+  height: 100vh;
+  scroll-snap-align: start;
+
+  /* centrado */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+
+.tecnologias_img.zoom:hover {
+  transform: scale(1.25);
+}
+
