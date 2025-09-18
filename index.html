@@ -8,50 +8,104 @@
     <title>Pedro Taquino - Portafolio</title>
   </head>
   <body>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#introduccion">Introducción</a>
+      <a href="#principal">Sobre mi</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+
+    <button class="openbtn" id="openbtn" onclick="openNav()">&#9776;</button>
+
     <div class="scroll-container">
-
-
-      <header class="snap-section" id="header">
-        <img id="pfp" src="img/pfp.jpg" class="zoom" alt="Pedro Taquino"/>
+      <section class="snap-section" id="introduccion">
+        <img id="pfp" src="img/pfp.jpg" class="zoom" alt="Pedro Taquino" />
         <h1 class="zoom">Pedro Taquino</h1>
         <h2 class="zoom">Desarrollador Backend | Especialista en Integraciones SAP</h2>
         <h3 class="zoom">ABAP ~ PI/PO ~ Integration Suite</h3>
         <h2 class="zoom">Estudiante | Tecnicatura Universitaria en Proramación</h2>
         <h3 class="zoom">C++ ~ C# ~ .Net ~ SQL</h3>
-      </header>
+      </section>
 
-
-      <main class="snap-section" id="main">
+      <section class="snap-section" id="principal">
+        <h2>Sobre mí:</h2>
         <p id="descripcion">
           ¡Hola! Soy Pedro. Tengo 22 años y vivo en Buenos Aires.<br />
-          Desde 2024 soy estudiante en la Tecnicatura Universitaria en
-          Programación de la UTN - FRGP. Allí, aprendí tecnologías como
+          Desde 2024 soy estudiante en la Tecnicatura Universitaria en Programación de la UTN - FRGP. Allí, aprendí tecnologías como
           <span class="destacado">C++, C#, .Net, y SQL.</span> <br />
-          En este último año comencé a trabajar como desarrollador backend,
-          enfocándome en <span class="destacado">SAP Integration Suite</span> y
-          otras tecnologías asociadas como
-          <span class="destacado">ABAP y PI/PO.</span> <br />Paso a paso, busco
-          expandir mis conocimientos y fortalecer mi perfil profesional. Me
-          entusiasma seguir aprendiendo al enfrentar nuevos desafíos, mientras
-          crezco como desarrollador entornos dinámicos y colaborativos.<br />
+          En este último año comencé a trabajar como desarrollador backend, enfocándome en <span class="destacado">SAP Integration Suite</span> y otras
+          tecnologías asociadas como <span class="destacado">ABAP y PI/PO.</span> <br />Paso a paso, busco expandir mis conocimientos y fortalecer mi perfil
+          profesional. Me entusiasma seguir aprendiendo al enfrentar nuevos desafíos, mientras crezco como desarrollador entornos dinámicos y colaborativos.<br />
           <span class="destacado">¡Acompañame!</span>
         </p>
         <table>
           <tr>
-            <td><img class="zoom tecnologias_img" src="img/ico_SAP.png" /></td>
-            <td><img class="zoom tecnologias_img" src="img/ico_C++.png" /></td>
-            <td><img class="zoom tecnologias_img" src="img/ico_net.png" /></td>
-            <td><img class="zoom tecnologias_img" src="img/ico_Cs.png" /></td>
-            <td><img class="zoom tecnologias_img" src="img/ico_SQL.png" /></td>
+            <td><img class="zoom tecnologias_img" title="SAP" src="img/ico_SAP.png" /></td>
+            <td><img class="zoom tecnologias_img" title="C++" src="img/ico_C++.png" /></td>
+            <td><img class="zoom tecnologias_img" title=".Net" src="img/ico_net.png" /></td>
+            <td><img class="zoom tecnologias_img" title="C#" src="img/ico_Cs.png" /></td>
+            <td><img class="zoom tecnologias_img" title="SQL" src="img/ico_SQL.png" /></td>
           </tr>
         </table>
         <p id="secreto">Es minimalista el diseño - Me dedico al backend, te lo dije.</p>
-      </main>
+      </section>
 
+      <section class="snap-section" id="proyectos">
+        <h2>Proyectos:</h2>
+        <table>
+          <tr>
+            <td>Nummis</td>
+            <td>ProCinema</td>
+            <td>Listado de artículos</td>
+          </tr>
+          <tr>
+            <td><img class="zoom tecnologias_img" src="img/ico_SQL.png" /></td>
+            <td><img class="zoom tecnologias_img" src="img/ico_SQL.png" /></td>
+            <td><img class="zoom tecnologias_img" src="img/ico_SQL.png" /></td>
+          </tr>
+          <tr>
+            <td class="descrpcion-proyectos">Proyecto propio <br />Gestión de finanzas</td>
+            <td class="descrpcion-proyectos">Proyecto realizado en Programación II</td>
+            <td class="descrpcion-proyectos">Proyecto realizado en Programación III</td>
+          </tr>
+        </table>
+      </section>
 
-      <footer class="snap-section">
-
-      </footer>
+      <section class="snap-section" id="contacto">
+        <h2>Contacto:</h2>
+        <form id="contact-form">
+          <input type="hidden" id="form-time" name="time" />
+          <label>Nombre</label>
+          <input type="text" id="form-name" name="name" placeholder="Juan" required />
+          <label>Correo electrónico</label>
+          <input type="email" id="form-email" name="email" placeholder="Ej: correo@mail.com" required />
+          <label>Asunto</label>
+          <input type="text" id="form-titulo" name="title" required />
+          <label>Mensaje</label>
+          <textarea id="form-mensaje" name="message" placeholder="Ingresá tu mensaje" required></textarea>
+          <input type="submit" value="Enviar" />
+        </form>
+        <table>
+          <tr>
+            <td>
+              <a href="https://www.linkedin.com/in/pedro-taquino-737853225/">
+                <img class="zoom tecnologias_img" src="img/ico_linkedin.png" />
+              </a>
+            </td>
+            <td>
+              <a href="mailto:ptaquino2003@gmail.com">
+                <img class="zoom tecnologias_img" src="img/ico_email.png" />
+              </a>
+            </td>
+            <td>
+              <a href="https://github.com/p14082003">
+                <img class="zoom tecnologias_img" src="img/ico_github.png" />
+              </a>
+            </td>
+          </tr>
+        </table>
+      </section>
     </div>
   </body>
 </html>

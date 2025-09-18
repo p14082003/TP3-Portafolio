@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+:root {
+  --fuenteBase: "Roboto", sans-serif;
+  --colorDestaque: rgb(255, 116, 61);
+}
+
 html,
 body {
   background-color: black;
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--fuenteBase);
   font-size: 25px;
   height: 100%;
   margin: 0;
@@ -20,26 +25,25 @@ body {
 
 .zoom:hover {
   transform: scale(1.05);
-  color: rgb(255, 116, 61);
+  color: var(--colorDestaque);
 }
-/*HEADER*/
 
+/*HEADER*/
 #pfp {
   width: 20%;
   border-radius: 50%;
   margin-bottom: 1rem;
 }
 
-/*MAIN*/
-
+/*PRINCIPAL*/
 #descripcion {
   text-align: justify;
   width: 65%;
-  font-size: 1.8vw;
+  font-size: 1.7vw;
 }
 
 .destacado {
-  color: rgb(255, 116, 61);
+  color: var(--colorDestaque);
 }
 
 .tecnologias_img {
@@ -55,11 +59,70 @@ body {
 }
 
 #secreto:hover {
-  color: rgb(255, 116, 61);
+  color: var(--colorDestaque);
+}
+
+/* PROYECTOS */
+.descrpcion-proyectos {
+  width: 15vw;
+  font-size: 1vw;
 }
 
 /*FOOTER*/
 
+/*SIDEBAR*/
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: var(--colorDestaque);
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111111;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+
+  position: fixed;
+  top: 0;
+  left: 0px;
+  z-index: 1000;
+}
+
+.openbtn:hover {
+  background-color: #444444;
+}
+
+/*CONFIG DE LA PÁGINA*/
 .scroll-container {
   height: 100vh;
   overflow-y: scroll;
@@ -87,9 +150,20 @@ body {
   text-align: center;
 }
 
-
-
 .tecnologias_img.zoom:hover {
   transform: scale(1.25);
 }
 
+::-webkit-input-placeholder {
+  /* Edge */
+  font-family: var(--fuenteBase);
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-family: var(--fuenteBase);
+}
+
+::placeholder {
+  font-family: var(--fuenteBase);
+}
