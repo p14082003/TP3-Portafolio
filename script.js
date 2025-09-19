@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const messageBox = document.getElementById("confirmacion");
   const form = document.getElementById("form-contacto");
 
-  messageButton.addEventListener("click", () => {
-    //e.preventDefault();
+  messageButton.addEventListener("click", (e) => {
+    e.preventDefault();
     if (form.checkValidity()) {
       console.log("test");
       messageBox.classList.add("show");
