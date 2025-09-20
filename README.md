@@ -16,5 +16,4 @@ Al no ser responsive, la página debe visualizarse en Windows, con la escala al 
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/331fc773-a685-4cdc-ac7f-1ff6b5cdd39b" />
 
 ### Contacto
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/0fd0ae80-d083-424e-a2d8-e342ef296d28" />
-
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/480c6dea-95ec-4671-9ad5-2202a0b29ebd" />
