@@ -1,13 +1,3 @@
-function openNav() {
-  document.getElementById("lateral").style.width = "13%";
-  document.getElementById("boton-abrir").style.display = "none";
-}
-
-function closeNav() {
-  document.getElementById("lateral").style.width = "0px";
-  document.getElementById("boton-abrir").style.display = "block";
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll(".snap-section");
   const navLinks = document.querySelectorAll(".lateral-link");

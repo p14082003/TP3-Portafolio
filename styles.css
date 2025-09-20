@@ -2,9 +2,11 @@
 
 :root {
   --fuenteBase: "Roboto", sans-serif;
+  --colorPrincipal: rgb(245, 245, 245);
   --colorDestaque: rgb(255, 116, 61);
-  --colorSecundario: rgb(12, 12, 12);
+  --colorSecundario: rgb(8, 8, 8);
   --colorSecundarioDestaque: rgb(68, 68, 68);
+  --colorTerciario: rgb(30, 30, 30);
 }
 
 * {
@@ -13,8 +15,8 @@
 
 html,
 body {
-  background-color: black;
-  color: white;
+  background-color: var(--colorSecundario);
+  color: var(--colorPrincipal);
   font-family: var(--fuenteBase);
   font-size: 25px;
   height: 100%;
@@ -28,7 +30,7 @@ body {
 
 .zoom {
   transition: transform 0.5s ease;
-  color: white;
+  color: var(--colorPrincipal);
   margin: 10px;
 }
 
@@ -108,12 +110,12 @@ body {
 .tecnologias-img.zoom:hover {
   transform: scale(1.25);
 }
-/*AQUI**/
+
 .tooltiptext {
   width: 100px;
   margin: 10px 30px 0px 30px;
   background-color: var(--colorSecundarioDestaque);
-  color: white;
+  color: var(--colorPrincipal);
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
@@ -125,11 +127,9 @@ body {
   opacity: 1;
 }
 
-/*HASTA AQUI!!!!!!*/
-
 #secreto {
   color: var(--colorSecundario);
-  transition: color 0.5s ease;
+  transition: color 0.2s ease;
 }
 
 #secreto:hover {
@@ -165,7 +165,7 @@ body {
   width: 40vw;
   margin: 0 auto;
   margin-bottom: 1vw;
-  background-color: var(--colorSecundarioDestaque);
+  background-color: var(--colorTerciario);
   padding: 30px;
   border-radius: 10px;
 }
@@ -178,7 +178,7 @@ body {
 #form-contacto label {
   font-size: 1vw;
   margin-bottom: 8px;
-  color: white;
+  color: var(--colorPrincipal);
   text-align: left;
   display: block;
   width: 100%;
@@ -209,7 +209,7 @@ body {
 #form-boton-enviar {
   transition: color 0.5s ease;
   background-color: var(--colorDestaque);
-  color: white;
+  color: var(--colorPrincipal);
   cursor: pointer;
   border-radius: 5px;
 }
@@ -232,21 +232,27 @@ body {
 /*BARRA LATERAL*/
 .lateral {
   height: 100%;
-  width: 13%;
+  width: 11%;
   position: fixed;
-  top: 0;
-  left: 0;
-  background-color: var(--colorSecundario);
+  /* background-color: var(--colorSecundario); */
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s;
+  padding-bottom: 40px;
+
+  border-right: 8px dotted var(--colorTerciario);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* <-- Vertically center content */
+  align-items: center; /* <-- Horizontally center links */
 }
 
 .lateral a {
-  padding: 8px 8px 8px 32px;
+  padding: 20px 0px;
   font-size: 25px;
   text-decoration: none;
-  color: white;
+  color: var(--colorPrincipal);
   display: block;
   transition: 0.3s;
 }
@@ -271,7 +277,7 @@ body {
   font-size: 20px;
   cursor: pointer;
   background-color: var(--colorSecundario);
-  color: white;
+  color: var(--colorPrincipal);
   padding: 15px 20px;
   border: none;
   display: none;
@@ -289,10 +295,12 @@ body {
 /*CONFIG DE LA PÁGINA*/
 .scroll-container {
   height: 100vh;
+  margin-left: 11%; /* Align the content next to the sidebar */
+  width: 89%; /* Make sure the content takes the rest of the space */
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  scrollbar-color: var(--colorDestaque) black;
+  scrollbar-color: var(--colorDestaque) var(--colorSecundario);
 }
 
 .snap-section {
@@ -328,7 +336,7 @@ body {
   bottom: -100px;
   right: 20px;
   background-color: var(--colorDestaque);
-  color: white;
+  color: var(--colorPrincipal);
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
