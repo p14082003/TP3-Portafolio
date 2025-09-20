@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
     <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
     <title>Pedro Taquino - Portafolio</title>
   </head>
@@ -58,8 +59,8 @@
             tecnologías asociadas como <span class="destacado">ABAP y PI/PO.</span>
           </p>
           <p>
-            Paso a paso, busco expandir mis conocimientos y fortalecer mi perfil profesional. <span class="destacado">Me entusiasma seguir aprendiendo</span> al enfrentar nuevos desafíos,
-            mientras crezco como desarrollador en entornos dinámicos y colaborativos.
+            Paso a paso, busco expandir mis conocimientos y fortalecer mi perfil profesional. <span class="destacado">Me entusiasma seguir aprendiendo</span> al
+            enfrentar nuevos desafíos, mientras crezco como desarrollador en entornos dinámicos y colaborativos.
           </p>
           <!-- <p><span class="destacado">¡Acompañame!</span></p> -->
         </div>
@@ -132,15 +133,15 @@
       <section class="snap-section" id="contacto">
         <h2>Contacto:</h2>
         <form id="form-contacto">
-          <input type="hidden" id="form-hora" />
+          <input type="hidden" name="hora" id="form-hora" />
           <label for="form-nombre">Nombre:</label>
-          <input class="form-campo" type="text" id="form-nombre" placeholder="Juan" required />
+          <input class="form-campo" type="text" name="nombre" id="form-nombre" placeholder="Juan" required />
           <label for="form-email">Correo electrónico:</label>
-          <input class="form-campo" type="email" id="form-email" placeholder="Ej: correo@mail.com" required />
+          <input class="form-campo" type="email" name="email" id="form-email" placeholder="Ej: correo@mail.com" required />
           <label for="form-titulo">Asunto:</label>
-          <input class="form-campo" type="text" id="form-titulo" placeholder="Asunto" required />
+          <input class="form-campo" type="text" name="titulo" id="form-titulo" placeholder="Asunto" required />
           <label for="form-mensaje">Mensaje:</label>
-          <textarea class="form-campo" id="form-mensaje" placeholder="Ingresá tu mensaje" required></textarea>
+          <textarea class="form-campo" name="mensaje" id="form-mensaje" placeholder="Ingresá tu mensaje" required></textarea>
           <input id="form-boton-enviar" type="submit" value="Enviar" />
         </form>
         <table>
